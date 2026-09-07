@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+Disallow: /assets/images/
+Disallow: /node_modules/
+Disallow: /src/
+
+Sitemap: https://www.najdalanazi.com/sitemap.xml

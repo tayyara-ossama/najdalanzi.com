@@ -1,0 +1,15 @@
+{
+  "name": "شركة نجد العنزي للاستثمار",
+  "short_name": "نجد العنزي",
+  "description": "شريك استراتيجي في التنمية والاستثمار وإعادة الإعمار",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0B0B0D",
+  "theme_color": "#0B0B0D",
+  "lang": "ar",
+  "dir": "rtl",
+  "icons": [
+    { "src": "/favicon.png", "sizes": "512x512", "type": "image/png" },
+    { "src": "/apple-touch-icon.png", "sizes": "180x180", "type": "image/png" }
+  ]
+}

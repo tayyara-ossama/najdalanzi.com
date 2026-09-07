@@ -1,0 +1,8 @@
+node_modules
+assets/images
+company-info.txt
+optimize-images.js
+serve.js
+.git
+.gitignore
+*.md
