@@ -99,8 +99,8 @@
       `الموضوع: ${d.topic}`,
       '', d.message,
     ].join('\n');
-    window.location.href = `mailto:info@najdalanazi.com?cc=az.sy.investment@gmail.com&subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
-    note.textContent = 'تم تجهيز الرسالة في تطبيق البريد لديك. إن لم يُفتح تلقائياً، راسلنا على info@najdalanazi.com';
+    window.location.href = `mailto:az.sy.investment@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+    note.textContent = 'تم تجهيز الرسالة في تطبيق البريد لديك. إن لم يُفتح تلقائياً، راسلنا على az.sy.investment@gmail.com';
     note.hidden = false;
   });
 
