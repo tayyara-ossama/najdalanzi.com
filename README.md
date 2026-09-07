@@ -28,3 +28,16 @@ npm run images    # regenerate assets/img from assets/images
 ```bash
 docker compose up -d --build   # http://localhost:8080
 ```
+
+## Deploy on a server with nginx (no Docker)
+```bash
+npm ci --ignore-scripts && npm run build
+./deploy/deploy.sh user@server:/var/www/najdalanazi      # rsync only the public files
+```
+Then on the server install `deploy/nginx-najdalanazi.conf` and `docker/security-headers.conf`
+(instructions are at the top of the conf file), run `nginx -t`, reload, and issue HTTPS with certbot.
+
+## Deploy with Docker (nginx inside the container)
+```bash
+docker compose up -d --build        # serves on :8080; put your host nginx/Caddy in front for HTTPS
+```

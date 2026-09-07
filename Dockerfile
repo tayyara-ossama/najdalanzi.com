@@ -12,6 +12,7 @@ RUN npx tailwindcss -i ./src/input.css -o ./assets/css/style.css --minify
 # ---- Stage 2: serve with nginx ----
 FROM nginx:1.27-alpine
 COPY docker/nginx.conf /etc/nginx/conf.d/default.conf
+COPY docker/security-headers.conf /etc/nginx/snippets/security-headers.conf
 WORKDIR /usr/share/nginx/html
 RUN rm -f ./*
 COPY --from=build /app/index.html ./
