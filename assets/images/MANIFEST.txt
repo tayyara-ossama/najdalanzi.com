@@ -129,15 +129,10 @@ icons/icon-67.svg	slide 32	رسم 35
 logo-najd-alanzi-ar.jpeg	slide 33	صورة 24
 icons/icon-9.svg	slide 33	رسم 42
 logo-najd-alanzi-ar.jpeg	slide 34	صورة 20
-pentagram-commercial-registration-dubai.png	slide 34	صورة 25
 icons/icon-16.svg	slide 34	رسم 27
 icons/icon-74.svg	slide 34	رسم 30
 icons/icon-42.svg	slide 34	رسم 33
 logo-najd-alanzi-ar.jpeg	slide 35	صورة 13
-unlimited-power-registration-1.png	slide 35	صورة 18
-unlimited-power-registration-2.png	slide 35	صورة 19
-unlimited-power-registration-3.png	slide 35	صورة 20
-unlimited-power-registration-4.png	slide 35	صورة 21
 logo-najd-alanzi-ar.jpeg	slide 36	صورة 13
 completion-cert-qatarenergy-tower10-fitout.png	slide 36	صورة 18
 completion-cert-12-villas-vvip.png	slide 36	صورة 19

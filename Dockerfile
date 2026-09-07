@@ -19,6 +19,7 @@ COPY --from=build /app/index.html ./
 COPY --from=build /app/assets/css ./assets/css
 COPY assets/js ./assets/js
 COPY assets/img ./assets/img
+COPY assets/pdf ./assets/pdf
 COPY robots.txt sitemap.xml site.webmanifest favicon.png apple-touch-icon.png ./
 EXPOSE 80
 HEALTHCHECK --interval=30s --timeout=3s CMD wget -qO- http://127.0.0.1/ >/dev/null || exit 1
