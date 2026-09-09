@@ -183,7 +183,7 @@ function header(t, ctx) {
 /* ---------- footer + lightbox + WhatsApp ---------- */
 function footer(t, ctx) {
   const n = t.nav, h = ctx.home;
-  const links = [[ctx.about, n.about], [`${h}#sectors`, n.sectors], [`${h}#capabilities`, n.capabilities], [`${h}#partners`, n.partners], [`${h}#projects`, n.projects], [`${h}#quality`, n.quality], [`${ctx.about}#leadership`, n.leadership], [`${h}#contact`, n.contact]];
+  const links = [[ctx.about, n.about], [`${h}#sectors`, n.sectors], [`${h}#capabilities`, n.capabilities], [`${h}#partners`, n.partners], [`${h}#projects`, n.projects], [`${h}#quality`, n.quality], [`${h}#contact`, n.contact]];
   return `
 <footer class="border-t border-white/5 bg-ink-950">
   <div class="container-x grid gap-10 py-14 md:grid-cols-[1.4fr_1fr_1fr]">
@@ -651,7 +651,7 @@ function homePage(t, ctx) {
 
 function aboutPage(t, ctx) {
   return head(t, ctx, t.meta.about) + header(t, ctx) + `<main id="top">` +
-    aboutHero(t, ctx) + about(t) + chairman(t) + leadership(t) + certificates(t) + why(t) + aboutCta(t, ctx) +
+    aboutHero(t, ctx) + about(t) + chairman(t) + certificates(t) + why(t) + aboutCta(t, ctx) +
     `</main>` + footer(t, ctx);
 }
 

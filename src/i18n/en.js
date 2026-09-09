@@ -11,9 +11,9 @@ module.exports = {
     },
     about: {
       title: 'About Us | Najd Alanzi Investment',
-      description: 'Learn about Najd Alanzi Investment: a Syrian limited liability company in Damascus (CR 23273), the chairman’s message, the board of directors, partner certificates and legal identity, and why Najd Alanzi.',
-      keywords: 'about Najd Alanzi, board of directors, Khaled Alanzi, ISO certificates, commercial register, Najd Alanzi Investment',
-      ogDescription: 'A Syrian LLC with a diversified investment model: identity, leadership, certificates and why Najd Alanzi.',
+      description: 'Learn about Najd Alanzi Investment: a Syrian limited liability company in Damascus (CR 23273), the chairman’s message, partner certificates and legal identity, and why Najd Alanzi.',
+      keywords: 'about Najd Alanzi, Khaled Alanzi, ISO certificates, commercial register, Najd Alanzi Investment',
+      ogDescription: 'A Syrian LLC with a diversified investment model: identity, certificates and why Najd Alanzi.',
     },
     slogan: 'Strategic partner in development, investment and reconstruction',
     orgDescription: 'A Syrian limited liability company developing projects of economic and developmental value and building institutional partnerships with national bodies and regional and international partners, with a focus on reconstruction, infrastructure and vital sectors.',
@@ -55,8 +55,8 @@ module.exports = {
   },
   aboutPage: {
     eyebrow: 'About Us', h1: 'A corporate identity that pairs growth with responsibility',
-    lead: 'A complete picture of the company: who we are, the chairman’s message, leadership, partner certificates and legal identity, and why Najd Alanzi.',
-    jump: [ { href: '#about', label: 'About' }, { href: '#chairman', label: 'Chairman’s message' }, { href: '#leadership', label: 'Board of Directors' }, { href: '#certificates', label: 'Certificates & legal identity' }, { href: '#why', label: 'Why Najd Alanzi' } ],
+    lead: 'A complete picture of the company: who we are, the chairman’s message, partner certificates and legal identity, and why Najd Alanzi.',
+    jump: [ { href: '#about', label: 'About' }, { href: '#chairman', label: 'Chairman’s message' }, { href: '#certificates', label: 'Certificates & legal identity' }, { href: '#why', label: 'Why Najd Alanzi' } ],
     ctaTitle: 'Ready to discuss your next opportunity', ctaLead: 'Reach our team in Damascus to explore an investment or execution partnership.', ctaBtn: 'Contact us', ctaBack: 'Back to home',
   },
   chairman: {
