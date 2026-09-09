@@ -7,7 +7,7 @@ npm ci --ignore-scripts
 npm run build
 rsync -avz --delete \
   --exclude='UP_PRE-QUALIFICATION.pdf' \
-  --include='index.html' --include='robots.txt' --include='sitemap.xml' --include='site.webmanifest' \
+  --include='index.html' --include='about/***' --include='en/***' --include='robots.txt' --include='sitemap.xml' --include='site.webmanifest' \
   --include='favicon.png' --include='apple-touch-icon.png' \
   --include='assets/' --include='assets/css/***' --include='assets/js/***' --include='assets/img/***' --include='assets/pdf/***' \
   --exclude='*' \

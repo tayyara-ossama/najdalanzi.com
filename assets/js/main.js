@@ -1,6 +1,7 @@
 /* Najd Alanzi Investment – landing page interactions (no dependencies) */
 (() => {
   'use strict';
+  const I18N = Object.assign({ lang: 'ar', openMenu: 'فتح القائمة', closeMenu: 'إغلاق القائمة', subject: 'طلب تواصل', fName: 'الاسم', fCompany: 'الجهة', fEmail: 'البريد', fPhone: 'الهاتف', fTopic: 'الموضوع', sent: 'تم تجهيز الرسالة في تطبيق البريد لديك. إن لم يُفتح تلقائياً، راسلنا على az.sy.investment@gmail.com' }, window.I18N || {});
 
   /* ---------- Header: solid on scroll ---------- */
   const header = document.getElementById('site-header');
@@ -15,7 +16,7 @@
   const setMenu = (open) => {
     menu.hidden = !open;
     toggle.setAttribute('aria-expanded', String(open));
-    toggle.setAttribute('aria-label', open ? 'إغلاق القائمة' : 'فتح القائمة');
+    toggle.setAttribute('aria-label', open ? I18N.closeMenu : I18N.openMenu);
     iconUse.setAttribute('href', open ? '#i-close' : '#i-menu');
   };
   setMenu(false);
@@ -90,17 +91,17 @@
     ev.preventDefault();
     if (!form.checkValidity()) { form.reportValidity(); return; }
     const d = Object.fromEntries(new FormData(form).entries());
-    const subject = `طلب تواصل – ${d.topic} – ${d.name}`;
+    const subject = `${I18N.subject} – ${d.topic} – ${d.name}`;
     const body = [
-      `الاسم: ${d.name}`,
-      `الجهة: ${d.company || '-'}`,
-      `البريد: ${d.email}`,
-      `الهاتف: ${d.phone || '-'}`,
-      `الموضوع: ${d.topic}`,
+      `${I18N.fName}: ${d.name}`,
+      `${I18N.fCompany}: ${d.company || '-'}`,
+      `${I18N.fEmail}: ${d.email}`,
+      `${I18N.fPhone}: ${d.phone || '-'}`,
+      `${I18N.fTopic}: ${d.topic}`,
       '', d.message,
     ].join('\n');
     window.location.href = `mailto:az.sy.investment@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
-    note.textContent = 'تم تجهيز الرسالة في تطبيق البريد لديك. إن لم يُفتح تلقائياً، راسلنا على az.sy.investment@gmail.com';
+    note.textContent = I18N.sent;
     note.hidden = false;
   });
 

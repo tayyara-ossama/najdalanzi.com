@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build": "tailwindcss -i ./src/input.css -o ./assets/css/style.css --minify",
+    "pages": "node build-pages.js",
+    "build": "node build-pages.js && tailwindcss -i ./src/input.css -o ./assets/css/style.css --minify",
     "watch": "tailwindcss -i ./src/input.css -o ./assets/css/style.css --watch",
     "images": "node optimize-images.js",
     "serve": "node serve.js"

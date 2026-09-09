@@ -6,8 +6,9 @@ RUN npm ci --ignore-scripts
 COPY tailwind.config.js ./
 COPY src ./src
 COPY index.html ./
+COPY build-pages.js ./
 COPY assets/js ./assets/js
-RUN npx tailwindcss -i ./src/input.css -o ./assets/css/style.css --minify
+RUN node build-pages.js && npx tailwindcss -i ./src/input.css -o ./assets/css/style.css --minify
 
 # ---- Stage 2: serve with nginx ----
 FROM nginx:1.27-alpine
@@ -16,6 +17,8 @@ COPY docker/security-headers.conf /etc/nginx/snippets/security-headers.conf
 WORKDIR /usr/share/nginx/html
 RUN rm -f ./*
 COPY --from=build /app/index.html ./
+COPY --from=build /app/about ./about
+COPY --from=build /app/en ./en
 COPY --from=build /app/assets/css ./assets/css
 COPY assets/js ./assets/js
 COPY assets/img ./assets/img

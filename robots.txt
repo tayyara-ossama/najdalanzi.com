@@ -3,5 +3,6 @@ Allow: /
 Disallow: /assets/images/
 Disallow: /node_modules/
 Disallow: /src/
+Disallow: /assets/pdf/UP_PRE-QUALIFICATION.pdf
 
 Sitemap: https://www.najdalanazi.com/sitemap.xml
