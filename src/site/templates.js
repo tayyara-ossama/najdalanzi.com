@@ -274,7 +274,7 @@ function hero(t, ctx) {
     </dl>
   </div>
 
-  <a href="#about-teaser" class="absolute bottom-6 left-1/2 hidden -translate-x-1/2 flex-col items-center gap-2 text-xs text-sand-400 md:flex" aria-label="${h.scrollAria}">
+  <a href="#sectors" class="absolute bottom-6 left-1/2 hidden -translate-x-1/2 flex-col items-center gap-2 text-xs text-sand-400 md:flex" aria-label="${h.scrollAria}">
     <span>${h.scroll}</span>
     <span class="h-10 w-px animate-drift bg-gold-line"></span>
   </a>
@@ -640,7 +640,7 @@ function aboutCta(t, ctx) {
 /* ---------- pages ---------- */
 function homePage(t, ctx) {
   return head(t, ctx, t.meta.home) + header(t, ctx) + `<main id="top">` +
-    hero(t, ctx) + aboutTeaser(t, ctx) + vmv(t) + sectors(t) + capabilities(t) + partners(t) + projects(t) + quality(t, ctx) + contact(t) +
+    hero(t, ctx) + vmv(t) + sectors(t) + capabilities(t) + partners(t) + projects(t) + quality(t, ctx) + contact(t) +
     `</main>` + footer(t, ctx);
 }
 
