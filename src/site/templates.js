@@ -132,9 +132,10 @@ function sprite() {
 function header(t, ctx) {
   const n = t.nav, h = ctx.home;
   const links = [
-    [ctx.about, n.about, !ctx.isHome], [`${h}#sectors`, n.sectors], [`${h}#capabilities`, n.capabilities], [`${h}#partners`, n.partners],
-    [`${h}#projects`, n.projects], [`${h}#quality`, n.quality], [`${h}#contact`, n.contact],
+    [h, n.home, ctx.isHome], [ctx.about, n.about, !ctx.isHome], [`${h}#sectors`, n.sectors], [`${h}#partners`, n.partners],
+    [`${h}#projects`, n.projects], [`${h}#contact`, n.contact],
   ];
+  const logo = t.lang === 'en' ? 'logo-najd-alanzi-en' : 'logo-najd-alanzi-ar';
   const desktop = links.map(([href, label, active]) => `<li><a class="nav-link whitespace-nowrap${active ? ' text-gold-300' : ''}" href="${href}"${active ? ' aria-current="page"' : ''}>${label}</a></li>`).join('\n        ');
   const mobile = links.map(([href, label]) => `<li><a class="block py-3 hover:text-gold-300" href="${href}">${label}</a></li>`).join('\n        ');
   const switcher = `<a href="${ctx.altPath}" hreflang="${t.lang === 'ar' ? 'en' : 'ar'}" lang="${t.lang === 'ar' ? 'en' : 'ar'}" class="inline-flex h-10 items-center gap-1.5 rounded-full border border-gold-500/40 px-3 text-xs font-bold text-gold-300 transition hover:bg-gold-500/10" aria-label="${n.switchAria}">${icon('globe2', 'h-4 w-4')}${t.switchShort}</a>`;
@@ -143,14 +144,14 @@ function header(t, ctx) {
   <div class="container-x">
     <nav class="mt-3 flex items-center justify-between rounded-2xl border border-white/5 bg-ink-900/70 px-4 py-2.5 shadow-card backdrop-blur-xl md:px-6" aria-label="${n.mainNav}">
       <a href="${h}" class="flex items-center gap-3" aria-label="${n.homeAria}">
-        <img src="/assets/img/logo-najd-alanzi-ar.webp" alt="${t.brand.logoAlt}" width="48" height="48" class="h-12 w-12 rounded-xl object-cover ring-1 ring-gold-500/30">
+        <img src="/assets/img/${logo}.webp" alt="${t.brand.logoAlt}" width="48" height="48" class="h-12 w-12 rounded-xl object-cover ring-1 ring-gold-500/30">
         <span class="hidden flex-col leading-tight sm:flex">
           <span class="font-display text-base font-extrabold text-sand-50">${t.brand.name}</span>
           <span class="text-[11px] font-semibold tracking-[.25em] text-gold-400">${t.brand.sub}</span>
         </span>
       </a>
 
-      <ul class="hidden items-center gap-6 xl:flex">
+      <ul class="hidden items-center gap-6 lg:flex">
         ${desktop}
       </ul>
 
@@ -160,14 +161,14 @@ function header(t, ctx) {
           ${icon('phone', 'h-4 w-4 text-gold-400')}${PHONE1.text}
         </a>
         <a href="${h}#contact" class="btn-gold hidden whitespace-nowrap !px-5 !py-2.5 !text-sm md:inline-flex">${n.cta}</a>
-        <button id="nav-toggle" class="flex h-11 w-11 items-center justify-center rounded-xl border border-white/10 text-sand-50 xl:hidden" aria-label="${n.openMenu}" aria-expanded="false" aria-controls="mobile-menu">
+        <button id="nav-toggle" class="flex h-11 w-11 items-center justify-center rounded-xl border border-white/10 text-sand-50 lg:hidden" aria-label="${n.openMenu}" aria-expanded="false" aria-controls="mobile-menu">
           ${icon('menu')}
         </button>
       </div>
     </nav>
   </div>
 
-  <div id="mobile-menu" class="container-x hidden xl:hidden">
+  <div id="mobile-menu" class="container-x lg:!hidden" hidden>
     <div class="mt-2 rounded-2xl border border-white/5 bg-ink-900/95 p-4 shadow-card backdrop-blur-xl">
       <ul class="divide-y divide-white/5 text-base font-semibold">
         ${mobile}
@@ -187,10 +188,7 @@ function footer(t, ctx) {
 <footer class="border-t border-white/5 bg-ink-950">
   <div class="container-x grid gap-10 py-14 md:grid-cols-[1.4fr_1fr_1fr]">
     <div>
-      <div class="flex items-center gap-4">
-        <img src="/assets/img/logo-najd-alanzi-ar.webp" alt="${t.brand.logoAlt}" width="64" height="64" loading="lazy" class="h-16 w-16 rounded-xl ring-1 ring-gold-500/30">
-        <img src="/assets/img/logo-najd-alanzi-en.webp" alt="${t.brand.logoAltEn}" width="64" height="64" loading="lazy" class="h-16 w-16 rounded-xl ring-1 ring-gold-500/30">
-      </div>
+      <img src="/assets/img/${t.lang === 'en' ? 'logo-najd-alanzi-en' : 'logo-najd-alanzi-ar'}.webp" alt="${t.brand.logoAlt}" width="80" height="80" loading="lazy" class="h-20 w-20 rounded-xl ring-1 ring-gold-500/30">
       <p class="mt-5 max-w-md text-sm leading-relaxed text-sand-400">${t.footer.about}</p>
       <a href="${ctx.altPath}" hreflang="${t.lang === 'ar' ? 'en' : 'ar'}" class="mt-4 inline-flex items-center gap-2 text-sm font-semibold text-gold-300 hover:text-gold-200">${icon('globe2', 'h-4 w-4')}${t.switchLabel}</a>
     </div>

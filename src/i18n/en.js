@@ -24,7 +24,7 @@ module.exports = {
     breadcrumbHome: 'Home', breadcrumbAbout: 'About Us',
   },
   nav: {
-    about: 'About', sectors: 'Sectors', capabilities: 'Capabilities', partners: 'Partners', projects: 'Experience', quality: 'Quality', leadership: 'Board of Directors', contact: 'Contact',
+    home: 'Home', about: 'About', sectors: 'Sectors', capabilities: 'Capabilities', partners: 'Partners', projects: 'Experience', quality: 'Quality', leadership: 'Board of Directors', contact: 'Contact',
     cta: 'Start a Partnership', openMenu: 'Open menu', closeMenu: 'Close menu', mainNav: 'Main navigation', homeAria: 'Najd Alanzi Investment – Home', quickLinks: 'Quick links', switchAria: 'التبديل إلى العربية',
   },
   hero: {

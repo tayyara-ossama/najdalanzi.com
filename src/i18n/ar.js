@@ -24,7 +24,7 @@ module.exports = {
     breadcrumbHome: 'الرئيسية', breadcrumbAbout: 'من نحن',
   },
   nav: {
-    about: 'من نحن', sectors: 'مجالات الأعمال', capabilities: 'القدرات', partners: 'الشراكات', projects: 'الخبرات', quality: 'الجودة والامتثال', leadership: 'مجلس المديرين', contact: 'تواصل معنا',
+    home: 'الرئيسية', about: 'من نحن', sectors: 'مجالات الأعمال', capabilities: 'القدرات', partners: 'الشراكات', projects: 'الخبرات', quality: 'الجودة والامتثال', leadership: 'مجلس المديرين', contact: 'تواصل معنا',
     cta: 'ابدأ شراكة', openMenu: 'فتح القائمة', closeMenu: 'إغلاق القائمة', mainNav: 'القائمة الرئيسية', homeAria: 'نجد العنزي للاستثمار – الصفحة الرئيسية', quickLinks: 'روابط سريعة', switchAria: 'Switch to English',
   },
   hero: {
