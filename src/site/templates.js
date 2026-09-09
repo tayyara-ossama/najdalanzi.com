@@ -81,7 +81,6 @@ function jsonLd(t, ctx, meta, extra) {
     email: EMAIL, telephone: PHONE1.tel,
     address: { '@type': 'PostalAddress', streetAddress: t.meta.street, addressLocality: t.meta.city, addressCountry: 'SY' },
     areaServed: ['SY', 'AE', 'QA', 'TR'],
-    founder: { '@type': 'Person', name: t.meta.founderName, jobTitle: t.meta.founderTitle },
     contactPoint: [PHONE1, PHONE2].map(p => ({ '@type': 'ContactPoint', telephone: p.tel, contactType: 'customer service', availableLanguage: ['ar', 'en'] })),
   };
   const site = { '@type': 'WebSite', '@id': `${SITE}/#website`, url: `${SITE}/`, name: t.brand.full, inLanguage: t.lang, publisher: { '@id': `${SITE}/#organization` } };
@@ -323,10 +322,6 @@ function about(t) {
       <div class="frame-gold">
         <img src="/assets/img/visual-urban-development.webp" alt="${a.imgAlt}" width="1400" height="787" loading="lazy" class="aspect-[4/3] w-full rounded-2xl object-cover shadow-card">
       </div>
-      <figure class="absolute -bottom-8 end-6 max-w-xs rounded-2xl border border-gold-500/30 bg-ink-900/95 p-5 shadow-gold md:-end-6">
-        <blockquote class="text-sm leading-relaxed text-sand-100">${a.quote}</blockquote>
-        <figcaption class="mt-3 text-xs text-gold-400">${a.quoteBy}</figcaption>
-      </figure>
     </div>
   </div>
 </section>`;
@@ -651,7 +646,7 @@ function homePage(t, ctx) {
 
 function aboutPage(t, ctx) {
   return head(t, ctx, t.meta.about) + header(t, ctx) + `<main id="top">` +
-    aboutHero(t, ctx) + about(t) + chairman(t) + certificates(t) + why(t) + aboutCta(t, ctx) +
+    aboutHero(t, ctx) + about(t) + certificates(t) + why(t) + aboutCta(t, ctx) +
     `</main>` + footer(t, ctx);
 }
 
